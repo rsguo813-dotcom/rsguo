@@ -5,5 +5,5 @@ export const firebaseConfig = {
   projectId: "tic-tac-toe-c7933",
   storageBucket: "tic-tac-toe-c7933.firebasestorage.app",
   messagingSenderId: "985799107392",
-  appId: "1:985799107392:web:c3094d1e77c2ef6aaf50a5"
+  appId: "1:985799107392:web:c3094d1e77c2ef6aaf50a5",
 };
