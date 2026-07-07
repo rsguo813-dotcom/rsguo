@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>&#20117;&#23383;&#36938;&#25138;</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="game-shell">
+      <section class="topbar" aria-label="&#36938;&#25138;&#25511;&#21046;">
+        <div>
+          <p class="eyebrow">Tic Tac Toe</p>
+          <h1>&#20117;&#23383;&#36938;&#25138;</h1>
+        </div>
+        <div class="controls">
+          <button id="start-game" class="primary-button" type="button">&#38283;&#22987;</button>
+          <button id="restart-game" class="ghost-button" type="button">&#37325;&#26032;&#38283;&#22987;</button>
+          <button id="end-game" class="danger-button" type="button">&#32080;&#26463;</button>
+        </div>
+      </section>
+
+      <section class="mode-panel" aria-label="&#23565;&#25136;&#27169;&#24335;">
+        <label class="field">
+          <span>&#23565;&#25136;&#27169;&#24335;</span>
+          <select id="mode-select">
+            <option value="computer">&#20491;&#20154;&#33287;&#38651;&#33126;</option>
+            <option value="local">&#38617;&#20154;&#23565;&#25136;&#65306;&#21516;&#19968;&#21488;&#38651;&#33126;</option>
+            <option value="online">&#30495;&#27491;&#38617;&#20154;&#23565;&#25136;&#65306;&#32178;&#36335;&#36899;&#32218;</option>
+          </select>
+        </label>
+
+        <div id="online-panel" class="online-panel" hidden>
+          <label class="field">
+            <span>&#25151;&#38291;&#20195;&#30908;</span>
+            <input id="room-code" type="text" maxlength="12" placeholder="&#20363;&#22914; GAME123" autocomplete="off" />
+          </label>
+          <div class="room-actions">
+            <button id="create-room" class="ghost-button" type="button">&#24314;&#31435;&#25151;&#38291;</button>
+            <button id="join-room" class="ghost-button" type="button">&#21152;&#20837;&#25151;&#38291;</button>
+          </div>
+          <p id="online-status" class="helper-text">&#29609;&#23478; A &#24314;&#31435;&#25151;&#38291;&#20006;&#20998;&#20139;&#25151;&#34399;&#65292;&#29609;&#23478; B &#36664;&#20837;&#25151;&#34399;&#21152;&#20837;&#12290;</p>
+        </div>
+      </section>
+
+      <section class="scoreboard" aria-label="&#27604;&#20998;">
+        <div>
+          <span class="score-label">&#29609;&#23478; X</span>
+          <strong id="score-x">0</strong>
+        </div>
+        <div>
+          <span class="score-label">&#24179;&#25163;</span>
+          <strong id="score-draw">0</strong>
+        </div>
+        <div>
+          <span class="score-label">&#29609;&#23478; O</span>
+          <strong id="score-o">0</strong>
+        </div>
+      </section>
+
+      <section class="play-area" aria-label="&#26827;&#30436;">
+        <div class="game-info">
+          <p id="status" class="status" role="status" aria-live="polite">&#36984;&#25799;&#27169;&#24335;&#24460;&#25353;&#12300;&#38283;&#22987;&#12301;</p>
+          <p id="player-badge" class="player-badge">&#20320;&#26159; X</p>
+        </div>
+
+        <div id="board" class="board" aria-label="&#20117;&#23383;&#36938;&#25138;&#26827;&#30436;">
+          <button class="cell" type="button" aria-label="&#31532; 1 &#26684;"></button>
+          <button class="cell" type="button" aria-label="&#31532; 2 &#26684;"></button>
+          <button class="cell" type="button" aria-label="&#31532; 3 &#26684;"></button>
+          <button class="cell" type="button" aria-label="&#31532; 4 &#26684;"></button>
+          <button class="cell" type="button" aria-label="&#31532; 5 &#26684;"></button>
+          <button class="cell" type="button" aria-label="&#31532; 6 &#26684;"></button>
+          <button class="cell" type="button" aria-label="&#31532; 7 &#26684;"></button>
+          <button class="cell" type="button" aria-label="&#31532; 8 &#26684;"></button>
+          <button class="cell" type="button" aria-label="&#31532; 9 &#26684;"></button>
+        </div>
+      </section>
+    </main>
+
+    <script type="module" src="script.js"></script>
+  </body>
+</html>
